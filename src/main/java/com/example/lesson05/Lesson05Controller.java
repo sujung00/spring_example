@@ -1,6 +1,7 @@
 package com.example.lesson05;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.lesson01.Data;
 
 @RequestMapping("/lesson05")
 @Controller
@@ -51,4 +54,19 @@ public class Lesson05Controller {
 		
 		return "lesson05/ex02";
 	}
+	
+	// http://localhost/lesson05/ex03
+	@GetMapping("/ex03")
+	public String ex03(Model model) {
+		Date today = new Date();
+		model.addAttribute("today", today);
+		return "lesson05/ex03";
+	}
+	
+	// http://localhost/lesson05/ex04
+	@GetMapping("/ex04")
+	public String ex04() {
+		return "/lesson05/ex04";
+	}
+
 }
