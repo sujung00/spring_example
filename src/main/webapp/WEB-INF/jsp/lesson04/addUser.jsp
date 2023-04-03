@@ -14,7 +14,7 @@
 		<h1>회원 정보 추가</h1>
 		<form method="post" action="/lesson04/ex01/add_user">
 			<div class="form-group">
-				<lable for="name"><b>이름</b></lable>
+				<label for="name"><b>이름</b></label>
 				<input type="text" id="name" name="name" class="form-control col-3">
 			</div>
 			<div class="form-group">
